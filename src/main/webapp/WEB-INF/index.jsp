@@ -64,7 +64,7 @@
             <small><strong class="text-muted" style="font-family: Algerian">safewind</strong></small>
 
         </a>
-        <h1 align="center">welcome!</h1>
+        <h1 align="center" style="font-family: Algerian">welcome!</h1>
 
         <hr />
 
@@ -74,13 +74,103 @@
     <div class="container">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-9">col-md-9</div>
+                <%--左侧栏目 start--%>
+                <div class="col-md-9">
+
+                    <%--滚动图片start--%>
+                        <div id="myCarousel" class="carousel slide">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <img src="${pageContext.request.contextPath}/dist/img/carousel/lion.jpg"  width="100%" alt="Forth slide"/>
+                                </div>
+                                <div class="item">
+                                    <img src="${pageContext.request.contextPath}/dist/img/carousel/sea.jpg" width="100%" alt="First slide" />
+                                </div>
+                                <div class="item">
+                                    <img src="${pageContext.request.contextPath}/dist/img/carousel/moun.jpg" width="100%" alt="Second slide"  />
+                                </div>
+                            </div>
+                            <!-- Carousel nav -->
+                            <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+                            <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+                        </div>
+
+                    <%--滚动图片end--%>
+
+
+                        <%--图片浏览start--%>
+                        <hr class="featurette-divider">
+                        <div class="row featurette">
+                            <div class="col-md-7">
+                                <h2 class="featurette-heading">海大夜景图 <small>希望你喜欢？</small></h2>
+                                <p class="lead">这图是2017年夏天暑假期间，海棠台风来大连之前的时，在海大体育馆拍的景象！当时已经接近黑夜了！</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="featurette-image img-responsive center-block" src="${pageContext.request.contextPath}/dist/img/lifephoto/P70802-190144.jpg"alt="Generic placeholder image">
+                            </div>
+                        </div>
+                        <!-- 水平线 -->
+                        <hr class="featurette-divider">
+
+                        <div class="row featurette">
+                            <div class="col-md-7 col-md-push-5">
+                                <h2 class="featurette-heading">海大晨图<small>希望你喜欢？</small></h2>
+                                <p class="lead">此图是大连下暴雨雨过后，去食堂吃早饭时，所拍 ！雨后天晴！空气清晰！</p>
+                            </div>
+                            <div class="col-md-5 col-md-pull-7">
+                                <img class="featurette-image img-responsive center-block" src="${pageContext.request.contextPath}/dist/img/lifephoto/P70804-080834.jpg" alt="Generic placeholder image">
+                            </div>
+                        </div>
+                        <!-- 水平线 -->
+                        <hr class="featurette-divider">
+
+                        <div class="row featurette">
+                            <div class="col-md-7">
+                                <h2 class="featurette-heading"> 海大鸟览图 <small>希望你喜欢？</small></h2>
+                                <p class="lead">拍照技术不是很好，希望你不要介意！此图是在e5七楼所拍。当时正在阮伟寝室！大概是下午5点多</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="featurette-image img-responsive center-block" src="${pageContext.request.contextPath}/dist/img/lifephoto/P70805-121300.jpg" alt="Generic placeholder image">
+                            </div>
+                        </div>
+
+
+                        <%--图片浏览end--%>
+
+                    <%--footer--%>
+                        <address>
+                            Copyright
+                            © 2017
+                            <strong>safewind</strong>
+                            <strong>大连海事大学</strong>
+                            <small>seanChrist</small>
+                        </address>
+
+                        <address>
+                            <abbr title="Phone">Phone:</abbr> (000)12345689
+                            <a href="mailto:#">mail@example.com</a>
+                        </address>
+                    <%--footer--%>
+
+
+
+
+                </div>
+                <%--左侧栏目 end--%>
+
+                <!--侧边提示导航栏 start-->
                 <div class="col-md-3">
                     <ul class="nav bs-docs-sidenav">
                         <!-- 1 -->
                         <li class="active">
-                            <a href="#js3" class="accordion-toggle" data-toggle="collapse">概览</a>
-                            <ul class="nav accordion-body collapse" id="js3" style="text-indent:18px">
+                            <a href="#total1" class="accordion-toggle" data-toggle="collapse">概览</a>
+                            <ul class="nav accordion-body collapse" id="total1" style="text-indent:18px">
                                 <li class="" ><a href="#js-individual-compiled">单个还是全部引入</a></li>
                                 <li class="" ><a href="#js-data-attrs">data 属性</a></li>
                                 <li class="" ><a href="#js-programmatic-api">编程方式的 API</a></li>
@@ -92,8 +182,8 @@
                         </li>
                         <!-- 2 -->
                         <li class="active">
-                            <a href="#js2" class="accordion-toggle" data-toggle="collapse"> 概览</a>
-                            <ul class="nav accordion-body collapse" id="js2" style="text-indent:18px">
+                            <a href="#total2" class="accordion-toggle" data-toggle="collapse"> 概览</a>
+                            <ul class="nav accordion-body collapse" id="total2" style="text-indent:18px">
                                 <li class="" ><a href="#js-individual-compiled">单个还是全部引入</a></li>
                                 <li class="" ><a href="#js-data-attrs">data 属性</a></li>
                                 <li class="" ><a href="#js-programmatic-api">编程方式的 API</a></li>
@@ -105,8 +195,8 @@
                         </li>
                         <!-- 3 -->
                         <li class="active">
-                            <a href="#js1" class="accordion-toggle" data-toggle="collapse">概览</a>
-                            <ul class="nav accordion-body collapse" id="js1" style="text-indent:18px">
+                            <a href="#total3" class="accordion-toggle" data-toggle="collapse">概览</a>
+                            <ul class="nav accordion-body collapse" id="total3" style="text-indent:18px">
                                 <li class="" ><a href="#js-individual-compiled">单个还是全部引入</a></li>
                                 <li class="" ><a href="#js-data-attrs">data 属性</a></li>
                                 <li class="" ><a href="#js-programmatic-api">编程方式的 API</a></li>
@@ -118,8 +208,8 @@
                         </li>
                         <!-- 4 -->
                         <li class="active">
-                            <a href="#js4" class="accordion-toggle" data-toggle="collapse">概览</a>
-                            <ul class="nav accordion-body collapse" id="js4" style="text-indent:18px">
+                            <a href="#total4" class="accordion-toggle" data-toggle="collapse">概览</a>
+                            <ul class="nav accordion-body collapse" id="total4" style="text-indent:18px">
                                 <li class="" ><a href="#js-individual-compiled">单个还是全部引入</a></li>
                                 <li class="" ><a href="#js-data-attrs">data属性</a></li>
                                 <li class="" ><a href="#js-programmatic-api">编程方式的 API</a></li>
@@ -130,15 +220,15 @@
                             </ul>
                         </li>
 
-                        <!-- 5 -->
-
                     </ul>
                 </div>
+
+                <!--侧边提示导航栏end-->
             </div>
         </div>
     </div>
 
-
+   <!--主页面导航栏start-->
     <nav id="menu">
         <ul>
             <li><a href="#">首页</a></li>
@@ -179,6 +269,8 @@
 
         </ul>
     </nav>
+
+    <!--主页面导航栏end-->
 
 </div>
 
