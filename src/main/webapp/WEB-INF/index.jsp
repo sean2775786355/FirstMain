@@ -8,182 +8,112 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/sidebar/jQuery.mmenu-6.1.5/dist/jquery.mmenu.all.js"></script>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/plugins/sidebar/jQuery.mmenu-6.1.5/dist/jquery.mmenu.all.css">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript">
-        $(function() {
-            $('nav#menu').mmenu({
-                extensions  : [ 'fx-menu-slide', 'shadow-page', 'shadow-panels', 'listview-large', 'pagedim-white' ],
-                iconPanels  : true,
-                counters    : true,
-                keyboardNavigation : {
-                    enable  : true,
-                    enhance : true
-                },
-                searchfield : {
-                    placeholder : '搜索菜单'
-                },
-                navbar : {
-                    title : '菜单'
-                },
-                navbars : [
-                    {
-                        position    : 'top',
-                        content     : [ 'searchfield' ]
-                    }, {
-                        position    : 'top',
-                        content     : [ 'breadcrumbs', 'close' ]
-                    }, {
-                        position    : 'bottom',
-
-                    }
-                ]
-            }, {
-                searchfield : {
-                    clear : true
-                }
-            });
-        });
-    </script>
-
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/docs/assets/css/docs.min.css">
     <title>index</title>
 </head>
 
-<body style="font-family: 微软雅黑 ;color: black">
-
-<div id="page">
-    <div id="head">
-        <a href="#menu" style="text-decoration:none;color:black">
-
-            <span class="glyphicon glyphicon-list" aria-hidden="true" style="font-size: 26px"></span>
-            &nbsp;&nbsp;
-            <small><strong class="text-muted" style="font-family: Algerian">safewind</strong></small>
-
-        </a>
-        <h1 align="center">welcome!</h1>
-
-        <hr />
-
-    </div>
+<body onload="systemTime()">
 
 
-    <div class="container">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-9">col-md-9</div>
-                <div class="col-md-3">
-                    <ul class="nav bs-docs-sidenav">
-                        <!-- 1 -->
-                        <li class="active">
-                            <a href="#js3" class="accordion-toggle" data-toggle="collapse">概览</a>
-                            <ul class="nav accordion-body collapse" id="js3" style="text-indent:18px">
-                                <li class="" ><a href="#js-individual-compiled">单个还是全部引入</a></li>
-                                <li class="" ><a href="#js-data-attrs">data 属性</a></li>
-                                <li class="" ><a href="#js-programmatic-api">编程方式的 API</a></li>
-                                <li class="" ><a href="#js-noconflict">避免命名空间冲突</a></li>
-                                <li class="" ><a href="#js-events">事件</a></li>
-                                <li class="" ><a href="#js-disabled">浏览器的JavaScript被禁用的情况</a></li>
-                                <li class="" ><a href="#callout-third-party-libs">第三方工具库</a></li>
-                            </ul>
-                        </li>
-                        <!-- 2 -->
-                        <li class="active">
-                            <a href="#js2" class="accordion-toggle" data-toggle="collapse"> 概览</a>
-                            <ul class="nav accordion-body collapse" id="js2" style="text-indent:18px">
-                                <li class="" ><a href="#js-individual-compiled">单个还是全部引入</a></li>
-                                <li class="" ><a href="#js-data-attrs">data 属性</a></li>
-                                <li class="" ><a href="#js-programmatic-api">编程方式的 API</a></li>
-                                <li class="" ><a href="#js-noconflict">避免命名空间冲突</a></li>
-                                <li class="" ><a href="#js-events">事件</a></li>
-                                <li class="" ><a href="#js-disabled">浏览器的JavaScript被禁用的情况</a></li>
-                                <li class="" ><a href="#callout-third-party-libs">第三方工具库</a></li>
-                            </ul>
-                        </li>
-                        <!-- 3 -->
-                        <li class="active">
-                            <a href="#js1" class="accordion-toggle" data-toggle="collapse">概览</a>
-                            <ul class="nav accordion-body collapse" id="js1" style="text-indent:18px">
-                                <li class="" ><a href="#js-individual-compiled">单个还是全部引入</a></li>
-                                <li class="" ><a href="#js-data-attrs">data 属性</a></li>
-                                <li class="" ><a href="#js-programmatic-api">编程方式的 API</a></li>
-                                <li class="" ><a href="#js-noconflict">避免命名空间冲突</a></li>
-                                <li class="" ><a href="#js-events">事件</a></li>
-                                <li class="" ><a href="#js-disabled">浏览器的 JavaScript 被禁用的情况</a></li>
-                                <li class="" ><a href="#callout-third-party-libs">第三方工具库</a></li>
-                            </ul>
-                        </li>
-                        <!-- 4 -->
-                        <li class="active">
-                            <a href="#js4" class="accordion-toggle" data-toggle="collapse">概览</a>
-                            <ul class="nav accordion-body collapse" id="js4" style="text-indent:18px">
-                                <li class="" ><a href="#js-individual-compiled">单个还是全部引入</a></li>
-                                <li class="" ><a href="#js-data-attrs">data属性</a></li>
-                                <li class="" ><a href="#js-programmatic-api">编程方式的 API</a></li>
-                                <li class="" ><a href="#js-noconflict">避免命名空间冲突</a></li>
-                                <li class="" ><a href="#js-events">事件</a></li>
-                                <li class="" ><a href="#js-disabled">浏览器的javaScript被禁用的情况</a></li>
-                                <li class="" ><a href="#callout-third-party-libs">第三方工具库</a></li>
-                            </ul>
-                        </li>
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <img src="${pageContext.request.contextPath}/dist/img/carousel/city.jpg"  width="100%" alt="Forth slide" height="100%" />
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1 style="font-size: 10em;font-style:italic;">welcome!</h1>
+                            <p id="time" style="font-size: 7em"></p>
+                            <a class="btn btn-lg btn-default" href="${pageContext.request.contextPath}/main">进入首页</a>
 
-                        <!-- 5 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="${pageContext.request.contextPath}/dist/img/carousel/alien.jpg" width="100%" alt="First slide" height="100%" />
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1 style="font-size: 180px;font-style: italic;">welcome!</h1>
 
-                    </ul>
+                            <a class="btn btn-lg btn-default" href="${pageContext.request.contextPath}/main">进入首页</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="${pageContext.request.contextPath}/dist/img/carousel/afer.jpg" width="100%" alt="Second slide" height="100%"  />
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1 style="font-size: 180px;font-style: italic;">welcome!</h1>
+                            <a class="btn btn-lg btn-default" href="${pageContext.request.contextPath}/main">进入首页</a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
         </div>
-    </div>
-
-
-    <nav id="menu">
-        <ul>
-            <li><a href="#">首页</a></li>
-            <li><span>关于我们</span>
-                <ul>
-                    <li><a href="#">历史</a></li>
-                    <li><span>团队</span>
-                        <ul>
-                            <li><a href="#">管理</a></li>
-                            <li><a href="#">销售</a></li>
-                            <li><a href="#">发展</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">地址</a></li>
-                </ul>
-            </li>
-            <li>
-                <span>项目</span>
-                <ul>
-                    <li><a href="#">项目1</a></li>
-                    <li><a href="#">项目2</a></li>
-                    <li><a href="#">项目3</a></li>
-                    <li><a href="#">项目4</a></li>
-                    <li><a href="#">.......</a></li>
-
-                </ul>
-            </li>
-            <li><a href="#">帮助</a></li>
-            <li><a href="#">联系</a></li>
-            <li><span>更多</span>
-                <ul>
-                    <li><a href="#">更多1</a></li>
-                    <li><a href="#">更多2</a></li>
-                    <li><a href="#">更多3</a></li>
-                    <li><a href="#">.......</a></li>
-                </ul>
-            </li>
-
-        </ul>
-    </nav>
-
-</div>
 
 
 
-</body>
+        <div>
+            <img src="${pageContext.request.contextPath}/dist/img/scenery/Paramid.jpg" width="100%">
+            <img src="${pageContext.request.contextPath}/dist/img/scenery/sea2.jpg" width="100%">
+            <img src="${pageContext.request.contextPath}/dist/img/scenery/tai.jpg" width="100%">
+
+        </div>
+
+
+   <%--script core--%>
+   <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">  
+        <%--    获取系统时间，将时间以指定格式显示到页面。  --%>
+            function systemTime()  
+            {  
+        <%--        获取系统时间。  --%>
+                var dateTime=new Date();  
+                var hh=dateTime.getHours();  
+                var mm=dateTime.getMinutes();  
+                var ss=dateTime.getSeconds();  
+                  
+        <%--        分秒时间是一位数字，在数字前补0。  --%>
+                mm = extra(mm);  
+                ss = extra(ss);  
+                  
+        <%--        将时间显示到ID为time的位置，时间格式形如：19:18:02  --%>
+                document.getElementById("time").innerHTML=hh+":"+mm+":"+ss;  
+                  
+        <%--        每隔1000ms执行方法systemTime()。  --%>
+                setTimeout("systemTime()",1000);  
+            }  
+              
+        <%--    补位函数。  --%>
+            function extra(x)  
+            {  
+                //如果传入数字小于10，数字前补一位0。  
+                if(x < 10)  
+                {  
+                    return "0" + x;  
+                }  
+                else  
+                {  
+                    return x;  
+                }  
+            }  
+        </script>
+
+
+
+        </body>
+
 
 </html>
