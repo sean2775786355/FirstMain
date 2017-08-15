@@ -230,7 +230,8 @@
     <%--script core--%>
     <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/docs/assets/js/docs.min.js"/>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"/>
     <!--  动态的向 点击的li标签加入 class="active"-->
     <script type="text/javascript">
         $('#test li').click(function(event) {
