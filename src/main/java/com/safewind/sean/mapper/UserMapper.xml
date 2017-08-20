@@ -68,7 +68,7 @@
 	<select id="findOne" parameterType="Long"
 		resultType="com.safewind.sean.po.User">
 		select id, username,
-		password, salt, locked from t_users
+		password, salt, locked from h_admin_user
 		where id=#{userId} limit 1
 	</select>
 	<select id="findByUsername" parameterType="String"
@@ -97,9 +97,9 @@
 		p.id=rp.permission_id
 	</select>
 
-	<delete id="delete1">
-		delete from t_users
-	</delete>
+	<!--<delete id="delete1">-->
+		<!--delete from t_users-->
+	<!--</delete>-->
 
 	<delete id="delete2">
 		delete from t_roles

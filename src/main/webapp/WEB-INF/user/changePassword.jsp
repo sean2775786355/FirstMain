@@ -31,7 +31,7 @@
                 <input type="text" id="username" name="username" class="form-control input-lg " value="<shiro:principal/>" readonly="true">
                 <label for="inputPassword" class="sr-only">新密码</label>
                 <input type="password" id="inputPassword" name="newpassword" class="form-control input-lg" placeholder="新密码" required="">
-                <button class="btn btn-lg btn-primary btn-block" onclick="check()">下一步</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">下一步</button>
             </form>
         </div>
         <div class="col-md-4"></div>
