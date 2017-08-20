@@ -20,14 +20,12 @@
     <title>verifyUser</title>
 </head>
 <body>
-
-<%--登录界面--%><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
 <div class="container">
     <div class="row">
-        <div class="col-md-4"></div>
         <div class="col-md-4">
-
+            <a href="${pageContext.request.contextPath}/main"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+        </div>
+        <div class="col-md-4">
             <form action="${pageContext.request.contextPath}/user/changePassword" class="form-signin"  method="post" accept-charset="UTF-8" role="form" >
                 <h2 class="form-signin-heading" align="center">修改密码</h2>
                 <label for="username" class="sr-only">账户名</label>

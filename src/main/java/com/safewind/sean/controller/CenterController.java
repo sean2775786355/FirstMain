@@ -65,14 +65,13 @@ public class CenterController {
     }
 
     @RequestMapping(value = "/user/DealchangePassword" ,method = RequestMethod.POST)
-    public String DealchangePassword(String username,String newpassword)
+    public String DealchangePassword(String username,String password)
     {
-        System.out.println("username="+username+"password= "+newpassword);
+        System.out.println("username="+username+"password= "+password);
         User user = userService.findByUsername(username);
         System.out.println("useId="+user.getId());
-        userService.changePassword(user.getId(),newpassword);
+        userService.changePassword(user.getId(),password);
         return "index";
     }
-
 
 }
