@@ -19,4 +19,11 @@ public class CenterController {
     }
 
 
+    @RequestMapping("main")
+    public String Main()
+    {
+        return "main";
+    }
+
+
 }
