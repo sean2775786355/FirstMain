@@ -50,7 +50,37 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <!-- <li><a href="http://mb.bootcss.com" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'themes'])" target="_blank">主题/模板</a></li> -->
-                <li><a href="#" style="font-family: courier;font-size: 15px;">safewind</a></li>
+                <%--<li><a href="#" style="font-family: courier;font-size: 15px;">safewind</a></li>--%>
+
+                <li class="dropdown user user-menu">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- Menu Footer-->
+                        <li>
+                            <a href="#">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            &nbsp; 个人中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="${pageContext.request.contextPath}/user/verifyUser">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                &nbsp; 修改密码
+                            </a>
+                        </li>
+                        <li>
+                            <a href="${pageContext.request.contextPath}/logout">
+                                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                                &nbsp; 安全退出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="${pageContext.request.contextPath}/logout"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>
+                </li>
             </ul>
         </nav>
     </div>
