@@ -12,7 +12,6 @@
        http://www.springframework.org/schema/aop/spring-aop.xsd"
 	default-lazy-init="true">
 	<mvc:view-controller path="/" view-name="redirect:/index"/>
-
 	<!-- 添加注解驱动 -->
 	<mvc:annotation-driven />
 	<!--spring会用默认的Servlet来响应静态文件， (DefaultServletHttpRequestHandler在容器启动是会使用主流web容器默认servlet的名称列表自动查找容器的默认servlet， 
