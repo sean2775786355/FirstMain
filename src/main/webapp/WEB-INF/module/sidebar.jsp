@@ -16,13 +16,13 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/docs/assets/css/docs.min.css">
     <title>sidebar</title>
 </head>
-<body>
+<body ">
 
     <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
         <ul class="nav bs-docs-sidenav" id="test">
             <br/><br/>
             <!-- 添加了active就能被展开 -->
-            <li class="active">
+            <li class="">
                 <a href="#">概要</a>
                 <ul class="nav">
                     <li class=""><a href="#">test1</a></li>
@@ -42,45 +42,49 @@
                 </ul>
             </li>
 
-            <li class="">
-                <a href="#">问题</a>
-                <ul class="nav">
-                    <li class=""><a href="#">问题1</a></li>
-                    <li class=""><a href="#">问题1</a></li>
-                    <li class=""><a href="#">问题1</a></li>
-                    <li class=""><a href="#">问题1</a></li>
-                    <li class=""><a href="#">问题1</a></li>
-                </ul>
-            </li>
+
 
             <li class="">
                 <a href="#">项目</a>
                 <ul class="nav">
-                    <li><a href="#">项目1</a></li>
-                    <li class=""><a href="#">项目2</a></li>
-                    <li class=""><a href="#">项目3</a></li>
-                    <li class=""><a href="#">项目4</a></li>
-                    <li class=""><a href="#">项目5</a></li>
+                    <li class=""><a href="#">webfont</a></li>
+                    <li class=""><a href="#">firstMain</a></li>
+                    <li class=""><a href="#">......</a></li>
+                    <li class=""><a href="#">......</a></li>
+                    <li class=""><a href="#">......</a></li>
                 </ul>
             </li>
 
             <li class="">
                 <a href="#">学习</a>
                 <ul class="nav">
-                    <li><a href="#">spring</a></li>
-                    <li><a href="#">shiro</a></li>
-                    <li><a href="#">spring mvc</a></li>
+                    <li><a href="#">sql学习笔记</a></li>
+                    <li><a href="#">spring学习笔记</a></li>
+                    <li><a href="#">shiro学习笔记</a></li>
+                    <li><a href="#">spring mvc学习笔记</a></li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#">相册</a>
+                <ul class="nav">
+                    <li class=""><a href="#">聪明活泼大五班</a></li>
+                    <li class=""><a href="#">海大电气三班</a></li>
+                    <li class=""><a href="#">家人图册</a></li>
+                    <li class=""><a href="#">私人相册</a></li>
+                    <li class=""><a href="#">其他</a></li>
                 </ul>
             </li>
 
             <li class="">
                 <a href="#">关于</a>
                 <ul class="nav">
-                    <li><a href="#">test1</a></li>
-                    <li><a href="#">test2</a></li>
-                    <li><a href="#">test3</a></li>
+                    <li><a href="#">团队</a></li>
+                    <li><a href="#">历史</a></li>
+                    <li><a href="#">成绩</a></li>
                 </ul>
             </li>
+
 
 
             <a class="back-to-top" href="#">
