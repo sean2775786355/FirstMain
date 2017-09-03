@@ -65,9 +65,9 @@
 
 
         <div>
-            <img src="${pageContext.request.contextPath}/dist/img/scenery/Paramid.jpg" width="100%">
-            <img src="${pageContext.request.contextPath}/dist/img/scenery/sea2.jpg" width="100%">
-            <img src="${pageContext.request.contextPath}/dist/img/scenery/tai.jpg" width="100%">
+            <img src="${pageContext.request.contextPath}/dist/img/pPhoto/p4.jpg" width="100%">
+            <img src="${pageContext.request.contextPath}/dist/img/pPhoto/p7.jpg" width="100%">
+            <img src="${pageContext.request.contextPath}/dist/img/pPhoto/p3.jpg" width="100%">
 
         </div>
 
