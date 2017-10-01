@@ -11,26 +11,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>head</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
-    <title>head</title>
+
     <style type="text/css">
         li.dropdown > a:hover{
             border-bottom: solid 1px #866ab3;
+        }
+        #button1 {
+            border: solid 1px #866ab3 ;
         }
     </style>
 </head>
 <body>
 <%--主页面头部--%>
 <header class="navbar navbar-static-top bs-docs-nav" id="top">
-    <div class="container">
+    <div class="container" id="head">
         <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <button id="button1" class="navbar-toggle collapsed" type="button"  data-parent="#head" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-
             </button>
             <a href=# class="navbar-brand" style="font-size: 30px;font-family: courier;">safewind</a>
         </div>
@@ -124,10 +127,8 @@
     $('li.dropdown').mouseover(function(){
         $(this).addClass('open')
     }).mouseout(function() {        $(this).removeClass('open')});
+    //bootstrap响应式导航栏点击collapse的按钮没有反应，不会向下展开 || 需要添加下面语句
+//    $('.collapse').collapse();
 </script>
-<script type="text/javascript" color="145,44,238" count="200" zIndex="-1" src="${pageContext.request.contextPath}/dist/js/canvas-nest.js"></script>
-
-</script>
-
 </body>
 </html>

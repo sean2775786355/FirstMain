@@ -74,4 +74,6 @@ public interface UserService {
 	 * @param roleIds
      */
 	public void userRoleUpdate(Long userId, Long... roleIds);
+
+	public boolean validatePassword(String username,String password);
 }

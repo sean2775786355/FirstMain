@@ -14,14 +14,13 @@
 </head>
 <body>
     <%--main footer--%>
-    <footer class="bs-docs-footer">
+    <footer class="bs-docs-footer" style="width: 100%">
         <div class="container">
-            <p class="text-center">Copyright ©  2017 safewind @author seanChrist</p>
+            <p class="text-center">Copyright &copy;  2017 safewind @author seanChrist</p>
         </div>
     </footer>
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" color="145,44,238" count="200" zIndex="-1" src="${pageContext.request.contextPath}/dist/js/canvas-nest.js"></script>
 </body>
 </html>

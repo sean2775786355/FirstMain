@@ -24,17 +24,17 @@
         <div class="col-md-4">
 
             <form action="" class="form-signin"  method="post" accept-charset="UTF-8" role="form" >
-                <h2 class="form-signin-heading" align="center">登录</h2>
-                <label for="username" class="sr-only">账户</label>
-                <input type="text" id="username" name="username" class="form-control input-lg" value="<shiro:principal/>" placeholder="账户" required="" autofocus="">
-                <label for="inputPassword" class="sr-only">密码</label>
-                <input type="password" id="inputPassword" name="password" class="form-control input-lg" placeholder="密码" required="">
+                <h2 class="form-signin-heading" align="center">sign in</h2>
+                <label for="username" class="sr-only">account</label>
+                <input type="text" id="username" name="username" class="form-control input-lg" value="<shiro:principal/>" placeholder="account" required="" autofocus="">
+                <label for="inputPassword" class="sr-only">password</label>
+                <input type="password" id="inputPassword" name="password" class="form-control input-lg" placeholder="password" required="">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="remember-me" value="true">记住我
+                        <input type="checkbox" name="remember-me" value="true">remember me
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">login</button>
             </form>
         </div>
         <div class="col-md-4"></div>

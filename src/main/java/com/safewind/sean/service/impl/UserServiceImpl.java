@@ -7,6 +7,8 @@ import com.safewind.sean.po.Role;
 import com.safewind.sean.po.User;
 import com.safewind.sean.po.UserRole;
 import com.safewind.sean.service.UserService;
+import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -168,6 +170,27 @@ public class UserServiceImpl implements UserService {
 		this.correlationRoles(userId,roleIds);
 		logger.info("插入新的用户角色关系");
 		logger.info("事务结束");
+	}
+
+	@Override
+	public boolean validatePassword(String username, String password) {
+
+		User user=userDao.findByUsername(username);
+		//用户输入的更原密码，加密转换   需要与加密是一样 才能得到相同的加密密码
+		String Password = new SimpleHash("md5", password,
+				ByteSource.Util.bytes(username+user.getSalt()),
+				2).toHex();
+
+//		//数据库中用户的密码（经过加密的）
+//		System.out.println("Password==="+user.getPassword());
+//		//用户输入密码 经过加密后的值
+//		System.out.println("password==="+Password);
+		if(Password.equals(user.getPassword()))
+		{
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	/**
