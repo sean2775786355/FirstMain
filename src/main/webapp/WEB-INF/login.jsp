@@ -13,6 +13,11 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
     <title>login</title>
+    <script type="text/javascript">
+        function reloadValidateCode(){
+            $("#validateCodeImg").attr("src","${pageContext.request.contextPath}/validateCode/imageProduce?data=" + new Date() + Math.floor(Math.random()*24));
+        }
+    </script>
 </head>
 
 <body >
@@ -23,7 +28,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
 
-            <form action="" class="form-signin"  method="post" accept-charset="UTF-8" role="form" >
+            <form action=" " class="form-signin"  method="post" accept-charset="UTF-8" role="form" >
                 <h2 class="form-signin-heading" align="center">sign in</h2>
                 <label for="username" class="sr-only">account</label>
                 <input type="text" id="username" name="username" class="form-control input-lg" value="<shiro:principal/>" placeholder="account" required="" autofocus="">
@@ -33,6 +38,8 @@
                     <label>
                         <input type="checkbox" name="remember-me" value="true">remember me
                     </label>
+                    <input type="text" name="randomcode" size="4" >
+                    <img id="validateCodeImg" src="${pageContext.request.contextPath}/validateCode/imageProduce" /><a onclick="javascript:reloadValidateCode();">看不清？</a>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">login</button>
             </form>
