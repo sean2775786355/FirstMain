@@ -507,7 +507,7 @@
     $(document).ready(function() {
         var table =  $('#example').DataTable({
             "ordering": false,
-            "info":     false
+            "info": false
         });
     } );
 </script>
