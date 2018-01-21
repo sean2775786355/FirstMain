@@ -15,11 +15,10 @@ public class SearchController {
     @Autowired
     private SearchService searchService;
     @ResponseBody
-    @RequestMapping(value = "/MoreContent/" ,method = RequestMethod.POST)
+    @RequestMapping(value = "/MoreContent" ,method = RequestMethod.POST)
     public List<String> getMoreContent(String searchWord)
     {
         System.out.println("======searchWord===="+searchWord);
-        System.out.println(searchService.getSearchContents(searchWord));
         return searchService.getSearchContents(searchWord);
     }
 
