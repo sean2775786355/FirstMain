@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/docs/assets/css/docs.min.css">
     <title>sidebar</title>
 </head>
-<body ">
+<body>
 
     <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
         <ul class="nav bs-docs-sidenav" id="test">
@@ -42,14 +42,12 @@
                 </ul>
             </li>
 
-
-
             <li class="">
                 <a href="#">项目</a>
                 <ul class="nav">
                     <li class=""><a href="#">webfont</a></li>
                     <li class=""><a href="#">firstMain</a></li>
-                    <li class=""><a href="#">......</a></li>
+                    <li class=""><a href="${pageContext.request.contextPath}/search">search</a></li>
                     <li class=""><a href="#">......</a></li>
                     <li class=""><a href="#">......</a></li>
                 </ul>
@@ -84,8 +82,6 @@
                     <li><a href="#">成绩</a></li>
                 </ul>
             </li>
-
-
 
             <a class="back-to-top" href="#">
                 返回顶部
