@@ -44,7 +44,12 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath*:dispatcher-servlet.xml</param-value>
     </init-param>
-    <load-on-startup>1</load-on-startup>
+      <multipart-config>
+          <max-file-size>20808820</max-file-size>
+          <max-request-size>418018841</max-request-size>
+          <file-size-threshold>10488576</file-size-threshold>
+      </multipart-config>
+    <!--<load-on-startup>1</load-on-startup>-->
   </servlet>
   <!-- 设置dispatchservlet的匹配模式，通过把dispatchservlet映射到/，默认servlet会处理所有的请求，包括静态资源 -->
   <servlet-mapping>
