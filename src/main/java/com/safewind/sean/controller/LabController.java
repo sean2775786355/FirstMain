@@ -1,13 +1,17 @@
 package com.safewind.sean.controller;
 
+import com.safewind.sean.service.SearchService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 @RequestMapping("/lab")
@@ -40,6 +44,15 @@ public class LabController {
             }
         }
         return "/lab/uploadfile";
+    }
+    @Autowired
+    private SearchService searchService;
+    @ResponseBody
+    @RequestMapping(value = "/MoreContent" ,method = RequestMethod.POST)
+    public List<String> getMoreContent(String searchWord)
+    {
+        System.out.println("======searchWord===="+searchWord);
+        return searchService.getSearchContents(searchWord);
     }
 
     @RequestMapping(value = "/el",method = RequestMethod.GET)

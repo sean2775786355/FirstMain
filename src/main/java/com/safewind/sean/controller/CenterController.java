@@ -67,7 +67,7 @@ public class CenterController {
     public String Search()
     {
 
-        return "/search/search";
+        return "/lab/search";
     }
 
 
