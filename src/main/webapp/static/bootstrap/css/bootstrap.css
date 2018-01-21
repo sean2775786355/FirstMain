@@ -227,6 +227,7 @@ th {
   }
   img {
     max-width: 100% !important;
+    /*!important 表示最高优先级*/
   }
   p,
   h2,
@@ -1323,15 +1324,19 @@ mark,
 }
 .text-nowrap {
   white-space: nowrap;
+  /*规定段落中的文本不进行换行：*/
 }
 .text-lowercase {
   text-transform: lowercase;
+  /*定义无大写字母，仅有小写字母*/
 }
 .text-uppercase {
   text-transform: uppercase;
+  /*定义仅有大写字母。*/
 }
 .text-capitalize {
   text-transform: capitalize;
+  /*capitalize 文本中的每个单词以大写字母开头*/
 }
 .text-muted {
   color: #777;

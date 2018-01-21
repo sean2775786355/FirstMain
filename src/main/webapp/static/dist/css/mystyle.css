@@ -1,0 +1,5 @@
+
+/*实现鼠标浮动到目标，出现下划线*/
+li.dropdown > a:hover{
+     border-bottom: solid 1px #866ab3;
+ }
