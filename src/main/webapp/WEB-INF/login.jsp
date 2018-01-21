@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -14,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
     <title>login</title>
     <script type="text/javascript">
+        <%--验证码--%>
         function reloadValidateCode(){
             $("#validateCodeImg").attr("src","${pageContext.request.contextPath}/validateCode/imageProduce?data=" + new Date() + Math.floor(Math.random()*24));
         }
@@ -36,10 +36,10 @@
                 <input type="password" id="inputPassword" name="password" class="form-control input-lg" placeholder="password" required="">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="remember-me" value="true">remember me
+                        <input type="checkbox" name="rememberMe" value="true">remember me
                     </label>
-                    <input type="text" name="randomcode" size="4" >
-                    <img id="validateCodeImg" src="${pageContext.request.contextPath}/validateCode/imageProduce" /><a onclick="javascript:reloadValidateCode();">看不清？</a>
+                    <input type="text" name="randomcode" placeholder="CODE"  size="4" >
+                    <a onclick="javascript:reloadValidateCode();"><img id="validateCodeImg" src="${pageContext.request.contextPath}/validateCode/imageProduce" /></a>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">login</button>
             </form>
@@ -49,5 +49,6 @@
 </div>
 
 </body>
+<%--引入背景特效--%>
 <script type="text/javascript" color="145,44,238" count="200" zIndex="-1" src="${pageContext.request.contextPath}/dist/js/canvas-nest.js"></script>
 </html>
