@@ -23,7 +23,7 @@
 <body>
 <!-- nav head start-->
 <%--header--%>
-<jsp:include page="module/head.jsp"/>
+<jsp:include flush="true" page="module/head.jsp"/>
 
 <div class="container" style="top: auto;">
     <div class="row">
@@ -36,10 +36,10 @@
                 <small>cdn加速地址</small><br>
                 <a class="text-primary" href="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js">https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js</a>
                 <br>
-                <a class="text-primary" href=" https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"> https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js</a>
+                <a class="text-primary" href="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js">https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js</a>
                 <br>
                 <h1 class="text-muted">github地址</h1>
-                <a class="text-primary" href="https://github.com/hustcc/canvas-nest.js/">https://github.com/hustcc/canvas-nest.js/</a>
+                <a class="text-primary" href="https://github.com/hustcc/canvas-nest.js/"></a>
                 <p>该网页就是使用该插件做的这个特效背景。不需要引入其他库，也能运行</p>
                 <ul>
                     <li>不依赖任何框架或者内库，比如不依赖 jQuery，使用原生的 javascript。</li>
@@ -69,7 +69,16 @@
                         <li>使用delete insert update 操作数据库时,在Mapper接口(***Dao.java)定义返回值为 <strong>int</strong>即可返回影响条数</li>
                         <li>不需要在  ***Mapper.xml中写入 resultType 忽略resultType即可。当然在MyBatis 配置文件会有相应的设置！！！</li>
                     </ol>
+                    <h5 class="text-danger">学习mybatis注意</h5>
+                    <ol>
+                        <li>resultType返回的是集合中的元素类型，而不是集合本身</li>
+                        <li>下面是错误代码</li>
+                        <li>  public List<string>SearchContents(String keyWord)</string></li>
+                        <li>Mapper 中resultType 用java.util.List出错了</li>
+                        <li class="text-danger">报错信息：  MyBatis之java.lang.UnsupportedOperationException</li>
+                        <li>应将resultType 中得 java.util.List 改为 java.lang.String 因为查询的结果为String而不是list集合</li>
 
+                    </ol>
                     <h5 class="text-danger">动态sql常用标签</h5>
                         <ul>
                             <li>if</li>
@@ -86,15 +95,12 @@
                 </ul>
             </div>
             <p style="word-break:break-all; word-wrap:break-word">
-
-
-
-
-
-
             </p>
 
-            <p>请点击</p><a href="http://v3.bootcss.com" class="text-success"><h1>Bootstrap中文网</h1></a>
+            <p>请点击</p>
+            <a href="http://v3.bootcss.com" class="text-success"><h1>Bootstrap中文网</h1></a>
+            <a href="http://materializecss.com/" class="text-success"><h1>google前端框架</h1></a>
+            <a href="https://semantic-ui.com/" class="text-success"><h1>semantic-ui前端框架</h1></a>
             <p>一个比较好的前端框架。</p>
         </div>
         <!-- right sidebar start -->
@@ -135,19 +141,19 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/docs/assets/js/docs.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/wheel-menu-master/jquery.wheelmenu.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-    <script type="text/javascript">
-        // 圆形菜单js
-        $(".wheel-button").wheelmenu({
-            trigger: "click",
-            animation: "fly",
-            animationSpeed: "medium"
-        });
-        $('#circleMenu').draggable();
+    <%--<script type="text/javascript" src="${pageContext.request.contextPath}/plugins/wheel-menu-master/jquery.wheelmenu.js"></script>--%>
+    <%--<script type="text/javascript" src="${pageContext.request.contextPath}/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>--%>
+    <%--<script type="text/javascript">--%>
+        <%--// 圆形菜单js--%>
+        <%--$(".wheel-button").wheelmenu({--%>
+            <%--trigger: "click",--%>
+            <%--animation: "fly",--%>
+            <%--animationSpeed: "medium"--%>
+        <%--});--%>
+        <%--$('#circleMenu').draggable();--%>
 
 
-    </script>
+    <%--</script>--%>
 <script type="text/javascript" color="145,44,238" count="200" zIndex="-1" src="${pageContext.request.contextPath}/dist/js/canvas-nest.js"></script>
 </body>
 </html>
